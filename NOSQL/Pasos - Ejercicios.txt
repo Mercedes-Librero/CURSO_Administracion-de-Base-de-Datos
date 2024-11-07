@@ -1,0 +1,53 @@
+crear base de datos
+crear coleccion
+crear registros  con int32, string, array ....
+crear search index: hacer busquedas sobre los registros
+
+en Filter:
+-mostrar los restaurantes con cuisime = irish  				{ cuisine: Irish}
+-mostrar los restaurantes de brooklyn con cocina American 	 	{ borough: Brooklyn} { cuisine: American}
+-mostrar los menores de 30 							{ edad: { $lt: 30 } }
+-mostrar los mayores de 4 							{ edad: { $gt: 4 } }
+- Mostrar entre dos años  							{ year: {$lt : 1920 ,  $gt : 1910 } }
+- Entre dos años y otro campo  						{ type: "movie", year: {$lt : 1920 ,  $gt : 1910 } }
+- Empiezan por M  								{ nombre: /^M/ }
+- Tengan una h 									{ nombre: /h/ }
+- Los nombres que sean pepe o Spiderman 					{ nombre: { $in: ["pepe","Spiderman"] } }
+											{ name: { $in: [ /Sansa/ , /Arya/ ] } }  
+-Busca en todo el array un valor 						{ 'lista': '13450' }
+-Busca una posicion exacta 							{ 'lista.0': '10' }
+-		{$and: [ {cp: {$gt: 4000}},{cp: {$lt: 10000} }]}
+
+-	{nombre_usuario: 1,cuenta_twitter:1,_id:0}    (campo project)
+-	{nombre_usuario: "superusu"}
+-	ordena los documentos del mas nuevo al mas viejo    {_id: -1}   (campo sort)
+-	ordena de mayor a menor   {nombre: 1}     -1 al reves
+
+
+*count.... desde pestaña agregation ???
+
+muestra en un mapa los restaurantes
+
+
+*usar charts para ver los gráficos
+
+
+
+RELACION uno a varios
+
+{
+    "_id": {
+        "$oid": "61422aac6d1eabc3b591f147"
+    },
+    "nombre": "marte",
+    "Apellidos": "shurname",
+    "edad": 334,
+    "Residencia": [{
+                  "lugar": "Islas",
+                  "cp": 332
+                },
+                {
+                  "lugar": "peninsula",
+                  "cp": 5544}
+                ]
+}
