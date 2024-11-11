@@ -1,4 +1,4 @@
-# Administració de Base de Datos
+# Administración de Base de Datos
 Certificado de Profesionalidad IFCT0310
 
 ## Conocimientos
